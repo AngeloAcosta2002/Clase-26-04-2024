@@ -1,0 +1,12 @@
+---
+const { text='Mi Botón', isRed } = Astro.props
+---
+
+<div class=" inline-flex items-center bg-orange-800 transition-colors hover:cursor-pointer hover:bg-blue-700 bg- text-white rounded py-1 px-2 "
+class:list={[{"bg-red-500 hover:bg-red-700": isRed}]}
+>
+<slot name="pre" />
+{ text }
+<slot name="pos" />
+
+</div>
